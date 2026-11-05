@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Skills Catalog — Good-to-Have List</title>
+<style>
+  :root{--ink:#1a1d23;--muted:#5c6470;--line:#e3e6ec;--bg:#f7f8fa;--card:#ffffff;--accent:#4f46e5;--accent-soft:#eef2ff;--amber:#92400e;--amber-soft:#fffbeb}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+  header{position:sticky;top:0;z-index:10;background:#10131a;color:#f2f4f8;padding:22px 20px 16px;border-bottom:3px solid var(--accent)}
+  header h1{margin:0 0 4px;font-size:24px;letter-spacing:-.02em}
+  header p{margin:0;color:#aeb6c4;font-size:13.5px;max-width:760px}
+  .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px;align-items:center}
+  #search{flex:1 1 260px;padding:10px 14px;border-radius:10px;border:1px solid #2a2f3a;background:#171b24;color:#fff;font-size:14px;outline:none}
+  #search:focus{border-color:var(--accent)}
+  #count{font-size:13px;color:#aeb6c4}
+  main{max-width:1080px;margin:0 auto;padding:10px 18px 60px}
+  h2.cat{font-size:17px;margin:34px 0 4px;padding-bottom:6px;border-bottom:2px solid var(--line);letter-spacing:-.01em}
+  h2.cat span{color:var(--muted);font-weight:400;font-size:13px;margin-left:8px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin-top:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 16px 13px;display:flex;flex-direction:column;gap:7px}
+  .card h3{margin:0;font-size:15.5px;letter-spacing:-.01em}
+  .src{font-size:12px;color:var(--muted)}
+  .desc{font-size:13.5px;color:#333a45;margin:0;flex:1}
+  .badges{display:flex;gap:6px;flex-wrap:wrap}
+  .badge{font-size:11px;font-weight:600;padding:2.5px 9px;border-radius:999px}
+  .b-repo{background:var(--accent-soft);color:var(--accent)}
+  .b-note{background:var(--amber-soft);color:var(--amber)}
+  .foot{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--line);padding-top:10px}
+  .foot a{font-size:12.5px;font-weight:600;color:var(--accent);text-decoration:none}
+  .foot a:hover{text-decoration:underline}
+  code.install{font-size:11px;background:#f1f3f7;border:1px solid var(--line);border-radius:6px;padding:2px 6px;color:#374151;word-break:break-all}
+  .hidden{display:none!important}
+  #empty{padding:44px 0;text-align:center;color:var(--muted);font-size:14px}
+  footer{max-width:1080px;margin:0 auto;padding:0 18px 40px;color:var(--muted);font-size:12.5px}
+  @media print{header{position:static}.toolbar{display:none}.card{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Agent Skills — Good-to-Have Catalog</h1>
+  <p>60 skills worth having, collected 5 Nov 2026 from AgenticSkills.io and GitHub. Each card: what it does, who made it, and the source link.</p>
+  <div class="toolbar">
+    <input id="search" type="text" placeholder="Search skills… (e.g. seo, react, design, pdf)">
+    <span id="count"></span>
+  </div>
+</header>
+<main id="main">
+
+<h2 class="cat">Standalone GitHub repos <span>full projects, not just single skills</span></h2>
+<div class="grid">
+  <div class="card" data-name="taste-skill leonxlnx design art direction">
+    <h3>Taste Skill</h3><div class="src">Leonxlnx · GitHub repo · MIT</div>
+    <p class="desc">Agent skills that give coding agents taste: art direction, reference images, and a real-browser check instead of generic AI-looking pages. Also listed on AgenticSkills (see Design section note).</p>
+    <div class="foot"><a href="https://github.com/Leonxlnx/taste-skill" target="_blank" rel="noopener">GitHub repo →</a><span class="badge b-repo">Repo</span></div>
+  </div>
+  <div class="card" data-name="open-design nexu-io design workspace">
+    <h3>Open Design</h3><div class="src">nexu-io · GitHub repo · Apache-2.0</div>
+    <p class="desc">A local-first, open-source collaborative AI design agent workspace for creating motion, prototypes, websites, apps, dashboards, presentations, images and videos with teams and AI agents.</p>
+    <div class="foot"><a href="https://github.com/nexu-io/open-design" target="_blank" rel="noopener">GitHub repo →</a><span class="badge b-repo">Repo</span></div>
+  </div>
+  <div class="card" data-name="ponytail dietrichgebert minimal code lazy senior dev">
+    <h3>Ponytail</h3><div class="src">DietrichGebert · GitHub repo · MIT</div>
+    <p class="desc">An agent skill/prompt that makes AI coding agents act like the laziest senior dev in the room: reuse what exists, write only the minimum code necessary.</p>
+    <div class="foot"><a href="https://github.com/DietrichGebert/ponytail" target="_blank" rel="noopener">GitHub repo →</a><span class="badge b-repo">Repo</span></div>
+  </div>
+</div>
+
+<h2 class="cat">Design &amp; UI <span>look, feel, motion, brand</span></h2>
+<div class="grid">
+  <div class="card" data-name="tailwind design system v4 tokens components">
+    <h3>Tailwind Design System (v4)</h3><div class="src">AgenticSkills listing</div>
+    <p class="desc">Build production-ready design systems with Tailwind CSS v4: CSS-first configuration, design tokens, component variants, responsive patterns, and accessibility.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/tailwind-design-system" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="ui skills ibelick frontend constraints accessibility motion">
+    <h3>UI Skills</h3><div class="src">ibelick</div>
+    <p class="desc">Opinionated, evolving constraints to guide agents when building frontend interfaces. Bundles sub-skills for baseline UI checks, fixing accessibility, fixing metadata, and fixing motion performance.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/ui-skills" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="frontend design anthropic aesthetic">
+    <h3>Frontend Design</h3><div class="src">Anthropic</div>
+    <p class="desc">Teaches AI agents to avoid the generic “AI slop” aesthetic — purple gradients, cookie-cutter layouts — and instead make bold, intentional design decisions toward distinctive, production-ready frontend code.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/frontend-design" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="canvas design anthropic png pdf art philosophy">
+    <h3>Canvas Design</h3><div class="src">Anthropic</div>
+    <p class="desc">Designs visual art in PNG and PDF using a written design philosophy (an aesthetic movement saved as .md) expressed visually on canvas. Output is 90% visual design, 10% essential text.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/canvas-design" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="ui ux pro max nextlevelbuilder styles palettes fonts guidelines">
+    <h3>UI/UX Pro Max</h3><div class="src">nextlevelbuilder</div>
+    <p class="desc">Searchable local UI/UX design intelligence: 79 styles, 192 product palettes and reasoning profiles, 74 font pairings, 119 UX guidelines, 105 icons, 17 GSAP presets, 25 chart types, 22 tech stacks — with prioritized rules from accessibility to charts.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/ui-ux-pro-max" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="brand guidelines anthropic colors typography identity">
+    <h3>Brand Guidelines</h3><div class="src">Anthropic</div>
+    <p class="desc">Applies a brand’s official colors and typography consistently across all generated artifacts — palette, heading/body fonts, smart font application, accent colors for shapes.</p>
+    <div class="badges"><span class="badge b-note">Note: ships with Anthropic’s brand — use as a template for your own</span></div>
+    <div class="foot"><a href="https://agenticskills.io/skills/brand-guidelines" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="theme factory anthropic themes slides artifacts">
+    <h3>Theme Factory</h3><div class="src">Anthropic</div>
+    <p class="desc">Styles artifacts with 10 pre-set professional themes or generates custom themes on the fly — each with a cohesive color palette (hex codes), font pairings and a distinct visual identity, applied consistently across decks and artifacts.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/theme-factory" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="taste skill leonxlnx design directions browser check">
+    <h3>Taste Skill (listing)</h3><div class="src">Leonxlnx</div>
+    <p class="desc">The AgenticSkills listing of the repo above: a script deals three of twenty researched design directions (type systems, palettes, compositions distilled from 247 real sites), you pick one, and the result is checked in a real browser with inspect scripts and screenshots. Separate runs for scrolled pages and app screens.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/taste-skill" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="shadcn ui components design system cli">
+    <h3>shadcn/ui</h3><div class="src">shadcn</div>
+    <p class="desc">A framework for building UI, components and design systems with shadcn/ui, where components are added as source code via the CLI. Enforces composing existing components first, semantic colors, form structure, styling and icon rules.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/shadcn" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="emil design engineering kowalski sonner vaul components polish">
+    <h3>Emil Design Engineering</h3><div class="src">Emil Kowalski</div>
+    <p class="desc">Encodes the design-engineering judgment behind Sonner and Vaul — how to build UI components, when animation earns its place, and the small details that separate polished software from merely working software.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/emil-design-eng" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="animate emil kowalski motion animation curve duration">
+    <h3>Animate</h3><div class="src">Emil Kowalski</div>
+    <p class="desc">Walks the decision chain most motion work skips — should this animate at all, its purpose, which tool, properties, curve and duration, interruption and exit — then writes the implementation. Companion to Emil Design Engineering.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/animate" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="emilkowalski skills collection design animation apple prototyping">
+    <h3>Emil Kowalski’s Design Skills</h3><div class="src">Emil Kowalski</div>
+    <p class="desc">The full collection behind Emil Design Engineering and Animate: twelve skills covering Apple design principles, an animation-vocabulary glossary, animation review/improvement, UI library picking, and prototyping.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/emilkowalski-skills" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="web design guidelines vercel review accessibility ui rules">
+    <h3>Web Design Guidelines</h3><div class="src">Vercel</div>
+    <p class="desc">Reviews UI code against Vercel’s Web Interface Guidelines — 100+ rules covering accessibility, forms, animation, typography, images, interaction, dark mode and i18n — and reports violations by file and line.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/web-design-guidelines" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="landing page design offer audience conversion typography hero">
+    <h3>Landing Page Design</h3><div class="src">AgenticSkills listing</div>
+    <p class="desc">Builds landing pages around one offer, one audience, and one primary action: page strategy first, then strict visual rules for typography, spacing, corner radius, backgrounds, hero layout, icons and motion. Also covers search visibility (SEO/AEO).</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/landing-page-design" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="figma openai mcp design to code screenshots assets">
+    <h3>Figma</h3><div class="src">OpenAI</div>
+    <p class="desc">Fetch design context, screenshots and assets from Figma via the Figma MCP server. Defines a required flow (get_design_context, get_screenshot, then build) to translate Figma designs into project code with 1:1 visual parity.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/figma" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="build awwwards quality sites meng to design code gsap three.js scroll">
+    <h3>Build Awwwards-Quality Sites</h3><div class="src">Meng To (Design+Code)</div>
+    <p class="desc">The principles and techniques behind award-winning sites — standout heroes, GSAP choreography, a single smooth-scroll engine, optional Three.js shaders and original imagery — with accessibility and performance safeguards.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/build-awwwards-quality-sites" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="platform design skills ehmo apple hig material wcag ios android macos">
+    <h3>Platform Design Skills</h3><div class="src">ehmo</div>
+    <p class="desc">A bundle of 8 sub-skills with 300+ design rules from Apple HIG, Material Design 3 and WCAG 2.2, covering Android, iOS, iPadOS, macOS, tvOS, visionOS, watchOS and web.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/platform-design-skills" target="_blank" rel="noopener">Skill page →</a><code class="install">npx skills add ehmo/platform-design-skills</code></div>
+  </div>
+  <div class="card" data-name="frontend slides zarazhangrui html presentations decks">
+    <h3>Frontend Slides</h3><div class="src">zarazhangrui</div>
+    <p class="desc">Create zero-dependency, animation-rich HTML presentations that run entirely in the browser. Decks are single HTML files on a fixed 16:9 stage with distinctive, custom-crafted design.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/frontend-slides" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+</div>
+
+<h2 class="cat">React &amp; Frontend Engineering <span>performance, transitions, video, mobile</span></h2>
+<div class="grid">
+  <div class="card" data-name="react best practices vercel next.js performance rules">
+    <h3>Vercel React Best Practices</h3><div class="src">Vercel</div>
+    <p class="desc">Comprehensive performance optimization guide for React and Next.js, maintained by Vercel: 70 rules across 8 categories, prioritized by impact, to guide automated refactoring and code generation.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/react-best-practices" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="react view transitions animation startviewtransition suspense">
+    <h3>React View Transitions</h3><div class="src">AgenticSkills listing</div>
+    <p class="desc">Animate between UI states using the browser’s native document.startViewTransition: declare what with &lt;ViewTransition&gt;, trigger when with startTransition/useDeferredValue/Suspense, control how with CSS classes. Unsupported browsers skip animations gracefully.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/react-view-transitions" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="remotion best practices video react rendering captions">
+    <h3>Remotion Best Practices</h3><div class="src">Remotion</div>
+    <p class="desc">Programmatic video creation with React using the Remotion framework: project setup, markup best practices, Studio previews, rendering, captions, and SaaS patterns.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/remotion-best-practices" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="react native best practices callstack performance ios android bundling">
+    <h3>React Native Best Practices</h3><div class="src">Callstack (source guide)</div>
+    <p class="desc">Performance optimization guide for React Native apps covering JavaScript/React, native (iOS/Android) and bundling optimizations, based on Callstack’s “Ultimate Guide to React Native Optimization.”</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/react-native-best-practices" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="upgrading react native upgrade helper expo sdk migration">
+    <h3>Upgrading React Native</h3><div class="src">AgenticSkills listing</div>
+    <p class="desc">The full React Native upgrade workflow — template diffs via Upgrade Helper, dependency updates, Expo SDK steps and common pitfalls — including migrating native iOS/Android config and handling breaking API updates.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/upgrading-react-native" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+</div>
+
+<h2 class="cat">Backend, Auth, Deploy &amp; Security <span>ship it and keep it safe</span></h2>
+<div class="grid">
+  <div class="card" data-name="create auth better auth typescript login authentication">
+    <h3>Create Auth</h3><div class="src">Better Auth</div>
+    <p class="desc">Guide for adding authentication to TypeScript/JavaScript applications using Better Auth. Walks through planning (framework, database, auth methods, plugins) before implementation.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/create-auth" target="_blank" rel="noopener">Skill page →</a><code class="install">npm install better-auth</code></div>
+  </div>
+  <div class="card" data-name="cloudflare deploy openai workers pages hosting">
+    <h3>Cloudflare Deploy</h3><div class="src">OpenAI</div>
+    <p class="desc">Deploy apps to Cloudflare using Workers, Pages and platform services. A consolidated skill with decision trees for picking the right Cloudflare product across compute, storage, AI, networking, security and media.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/cloudflare-deploy" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="agents sdk cloudflare stateful ai agents sqlite workflows mcp">
+    <h3>Agents SDK (Cloudflare)</h3><div class="src">Cloudflare</div>
+    <p class="desc">Build stateful AI agents on Cloudflare’s platform with persistent SQLite-backed state, callable RPC methods, scheduling, durable workflows, queues/retries, MCP integration and streaming chat agents.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/agents-sdk" target="_blank" rel="noopener">Skill page →</a><code class="install">npm install agents</code></div>
+  </div>
+  <div class="card" data-name="varlock security env secrets environment variables dmno">
+    <h3>Varlock</h3><div class="src">wrsmith108 · repo: dmno-dev/varlock</div>
+    <p class="desc">Secure-by-default environment variable management for Claude Code sessions. Ensures secrets never appear in terminal output, the agent’s context, logs or git commits, using a validated .env.schema.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/varlock-claude-skill" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+</div>
+
+<h2 class="cat">Marketing, Content &amp; Social <span>copy, strategy, launches</span></h2>
+<div class="grid">
+  <div class="card" data-name="copywriting corey haines conversion landing page emails ads">
+    <h3>Copywriting</h3><div class="src">Corey Haines (marketing skills)</div>
+    <p class="desc">Acts as an expert conversion copywriter: writes clear, compelling marketing copy for pages (homepage, landing, pricing, feature, about) using direct-response frameworks for landing pages, emails and ads.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/copywriting" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="content strategy corey haines calendar topic clusters leads authority">
+    <h3>Content Strategy</h3><div class="src">Corey Haines (marketing skills)</div>
+    <p class="desc">Acts as a content strategist that plans content to drive traffic, build authority and generate leads: content calendars, topic clusters and distribution strategies around searchable and shareable content.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/content-strategy" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="marketing ideas corey haines 139 saas growth tactics">
+    <h3>Marketing Ideas</h3><div class="src">Corey Haines (marketing skills)</div>
+    <p class="desc">A marketing strategist with a library of 139 proven SaaS marketing ideas across content/SEO, paid ads, launches and product-led growth. Suggests 3–5 ideas matched to your stage, budget and resources, with implementation steps.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/marketing-ideas" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="social content corey haines twitter linkedin instagram hooks repurposing">
+    <h3>Social Content</h3><div class="src">Corey Haines</div>
+    <p class="desc">Acts as an expert social media strategist creating platform-optimized content for Twitter/X, LinkedIn, Instagram and more: content pillars, hook formulas, repurposing systems, calendars and engagement strategy.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/social-content" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="social media skills charlie hills bundle voice hooks reels newsletter">
+    <h3>Social Media Skills</h3><div class="src">Charlie Hills</div>
+    <p class="desc">A bundle of 17 chained SKILL.md files for social media content, anchored by a voice-builder that interviews you, analyzes writing samples and emits a persistent voice profile. Hook generation, post writing and scoring, reels scripting, carousels/infographics, newsletter drafting, niche research and profile optimization all run from that shared voice.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/social-media-skills" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="launch strategy corey haines saas product launch orb framework phases">
+    <h3>Launch Strategy</h3><div class="src">Corey Haines (marketing skills)</div>
+    <p class="desc">Expert guidance for planning SaaS product launches and feature announcements that build momentum and convert interest into users. Structured around the ORB framework (Owned, Rented, Borrowed channels) and a five-phase launch approach.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/launch-strategy" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="content research writer outline draft citations voice editing">
+    <h3>Content Research Writer</h3><div class="src">AgenticSkills listing</div>
+    <p class="desc">Acts as a writing partner that helps you research, outline, draft and refine content while maintaining your unique voice: collaborative outlining, research assistance with citations, hook improvement, section-by-section feedback and citation management.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/content-research-writer" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="humanizer blader rewrite ai text human em dashes">
+    <h3>Humanizer</h3><div class="src">blader/humanizer (MIT)</div>
+    <p class="desc">Rewrites AI-sounding text so it reads human: cuts em dashes, AI vocabulary, significance inflation, rule-of-three padding, chatbot artifacts and filler — while preserving every fact.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/humanizer" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+</div>
+
+<h2 class="cat">SEO &amp; Analytics <span>get found, measure it</span></h2>
+<div class="grid">
+  <div class="card" data-name="programmatic seo corey haines templates scale pages data">
+    <h3>Programmatic SEO</h3><div class="src">Corey Haines</div>
+    <p class="desc">Builds SEO-optimized pages at scale using templates and data, with playbooks for templates, comparisons, locations, directories and more — designed to rank while avoiding thin-content penalties.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/programmatic-seo" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="seo audit corey haines crawlability indexation technical on-page">
+    <h3>SEO Audit</h3><div class="src">Corey Haines</div>
+    <p class="desc">Identifies SEO issues across crawlability, indexation, technical foundations, on-page optimization, content quality and authority, with actionable recommendations to improve organic search performance.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/seo-audit" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="analytics tracking corey haines ga4 tag manager utm events">
+    <h3>Analytics Tracking</h3><div class="src">Corey Haines</div>
+    <p class="desc">Sets up analytics tracking (GA4, Google Tag Manager, UTM strategy, event naming and tracking plans) that provides actionable insights for marketing and product decisions, with validation and privacy guidance.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/analytics-tracking" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="claude seo daniel agrici bundle sub-agents schema eeat geo backlinks">
+    <h3>Claude SEO</h3><div class="src">Daniel Agrici (AgriciDaniel/claude-seo)</div>
+    <p class="desc">A comprehensive SEO skill bundle distributed as a Claude plugin marketplace: 25 skills and 18 specialized sub-agents spanning technical SEO, on-page, E-E-A-T, schema/JSON-LD, GEO/AEO, backlinks, local and international SEO, plus PDF/Excel reporting.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/claude-seo" target="_blank" rel="noopener">Skill page →</a><code class="install">npx skills add AgriciDaniel/claude-seo</code></div>
+  </div>
+  <div class="card" data-name="geo optimizer auriti labs ai search chatgpt perplexity citability llms.txt">
+    <h3>GEO Optimizer</h3><div class="src">Auriti Labs (Juan Camilo Auriti)</div>
+    <p class="desc">Makes websites visible and citable by AI search engines (ChatGPT Search, Perplexity, Claude, Google AI Overviews) via a GEO audit framework (0–100 score across 9 categories) plus a citability engine of 47 content checks, with CLI and MCP tools for audit, fix, llms.txt and schema generation.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/geo-optimizer" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+</div>
+
+<h2 class="cat">Documents &amp; Office <span>pdf, decks, word, excel</span></h2>
+<div class="grid">
+  <div class="card" data-name="pdf anthropic extract create merge split forms ocr pypdf">
+    <h3>PDF</h3><div class="src">Anthropic</div>
+    <p class="desc">Extract text/tables, create new PDFs, merge/split documents, handle forms and OCR. Covers pypdf, pdfplumber and reportlab in Python plus command-line tools like pdftotext, qpdf and pdftk.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/pdf" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="openai pdf read create review layout rendering reportlab">
+    <h3>OpenAI PDF</h3><div class="src">OpenAI</div>
+    <p class="desc">Read, create and review PDFs with layout and visual formatting integrity. Emphasizes visual review — rendering pages to PNGs to verify alignment and legibility — using reportlab for generation and pdfplumber/pypdf for extraction.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/openai-pdf" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="pptx anthropic powerpoint presentations decks pptxgenjs templates">
+    <h3>PPTX</h3><div class="src">Anthropic</div>
+    <p class="desc">Create, edit and analyze PowerPoint presentations — build decks with pptxgenjs, edit existing decks or templates by unpacking and editing slide XML, read content with markitdown. Includes design guidance, template workflows and validation scripts.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/pptx" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="docx anthropic word documents tracked changes docx-js comments">
+    <h3>DOCX</h3><div class="src">Anthropic</div>
+    <p class="desc">Create, edit and analyze Word documents with tracked changes and formatting: new documents with docx-js, edits at the XML level preserving revision history, comments and legacy .doc conversion.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/docx" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="xlsx anthropic excel spreadsheets formulas openpyxl pandas recalculation">
+    <h3>XLSX</h3><div class="src">Anthropic</div>
+    <p class="desc">Create, edit and analyze Excel spreadsheets with formulas, formatting and visualization. Uses openpyxl and pandas, enforces live formulas over hardcoded results, and mandates recalculation checks so outputs ship with zero formula errors.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/xlsx" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="doc coauthoring anthropic collaborative writing specs proposals prd rfc reader testing">
+    <h3>Doc Co-Authoring</h3><div class="src">Anthropic</div>
+    <p class="desc">A structured workflow for collaborative document creation in three stages — Context Gathering, Refinement &amp; Structure, and Reader Testing with a fresh agent instance. Suited to specs, proposals, PRDs, design docs and RFCs.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/doc-coauthoring" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="slack gif creator anthropic animated gif emoji pil">
+    <h3>Slack GIF Creator</h3><div class="src">Anthropic</div>
+    <p class="desc">Generate animated GIFs optimized for Slack — handles dimension constraints (128×128 emoji, 480×480 messages), animation patterns and validation. Provides a GIFBuilder toolkit, easing functions and frame helpers built on PIL.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/slack-gif-creator" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+</div>
+
+<h2 class="cat">Planning, Workflow &amp; Meta-Skills <span>how the agent works</span></h2>
+<div class="grid">
+  <div class="card" data-name="writing plans obra implementation tasks tdd spec bite-sized">
+    <h3>Writing Plans</h3><div class="src">obra</div>
+    <p class="desc">Create detailed implementation plans with bite-sized tasks (2–5 min each) for structured execution: files, interfaces, exact tests and step-by-step TDD actions, so an engineer with no codebase context can implement the spec.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/writing-plans" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="executing plans obra plan execution tdd ledger review">
+    <h3>Executing Plans</h3><div class="src">obra</div>
+    <p class="desc">Execute a written plan task by task in the current session — no per-task subagents — using TDD as the per-task gate and a ledger to track progress and rulings. Finishes with one fresh-context review of the whole branch.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/executing-plans" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="planning with files othmanadi markdown plan disk compaction recovery long tasks">
+    <h3>Planning With Files</h3><div class="src">OthmanAdi</div>
+    <p class="desc">Keeps a long task’s plan in markdown files on disk, re-injected each turn, so the plan survives /clear, compaction and crashed sessions — closing behind a deterministic completion gate.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/planning-with-files" target="_blank" rel="noopener">Skill page →</a><code class="install">/plugin install planning-with-files@planning-with-files</code></div>
+  </div>
+  <div class="card" data-name="skill creator anthropic create skills testing evaluation triggering">
+    <h3>Skill Creator</h3><div class="src">Anthropic</div>
+    <p class="desc">A skill for creating new skills and iteratively improving them — draft the skill, run test prompts with and without it, evaluate results qualitatively and quantitatively, then rewrite from feedback. Also optimizes skill descriptions for reliable triggering.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/skill-creator" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="find skills vercel labs discovery skills cli search install ecosystem">
+    <h3>Find Skills</h3><div class="src">Vercel Labs</div>
+    <p class="desc">A meta-skill for skill discovery: teaches the agent to use the Skills CLI (npx skills find / npx skills add) to search the open agent skills ecosystem and install skills mid-task, with guidance on verifying quality via install counts, source reputation and GitHub stars.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/find-skills" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="deep research sanjay gemini autonomous reports cited api key paid">
+    <h3>Deep Research</h3><div class="src">sanjay3290</div>
+    <p class="desc">Runs autonomous, multi-step research via Google’s Gemini Deep Research API — it plans, searches, reads and synthesizes information into thorough, cited reports.</p>
+    <div class="badges"><span class="badge b-note">Note: needs a paid Gemini API key (~$2–5 per task, 2–10 min)</span></div>
+    <div class="foot"><a href="https://agenticskills.io/skills/deep-research" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="webapp testing anthropic playwright python ui verification debugging">
+    <h3>Web App Testing</h3><div class="src">Anthropic</div>
+    <p class="desc">Tests local web applications by writing native Python Playwright scripts for automated UI verification and debugging, with helper scripts for server lifecycle management.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/webapp-testing" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="addy agent skills addy osmani bundle engineering code review testing debugging security performance">
+    <h3>Agent Skills (Addy Osmani)</h3><div class="src">addyosmani (Addy Osmani)</div>
+    <p class="desc">A single plugin carrying 25 skills covering the engineering lifecycle — spec-driven and test-driven development, code review, debugging, security hardening, performance, and shipping.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/addy-agent-skills" target="_blank" rel="noopener">Skill page →</a><code class="install">/plugin install agent-skills@addy-agent-skills</code></div>
+  </div>
+  <div class="card" data-name="mcp builder anthropic model context protocol servers tools guide">
+    <h3>MCP Builder</h3><div class="src">Anthropic</div>
+    <p class="desc">A guide for creating high-quality MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools — covering research/planning, implementation, testing and evaluation phases.</p>
+    <div class="foot"><a href="https://agenticskills.io/skills/mcp-builder" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+  <div class="card" data-name="using superpowers obra superpowers framework entry">
+    <h3>Using Superpowers</h3><div class="src">obra</div>
+    <p class="desc">The entry skill of the Superpowers framework — the starting point that routes an agent into the framework’s other skills (planning, execution, TDD and review workflows).</p>
+    <div class="badges"><span class="badge b-note">Note: description summarized — the listing page’s text could not be fully retrieved</span></div>
+    <div class="foot"><a href="https://agenticskills.io/skills/using-superpowers" target="_blank" rel="noopener">Skill page →</a></div>
+  </div>
+</div>
+
+<div id="empty" class="hidden">No skills match your search.</div>
+</main>
+<footer>
+  Sources: AgenticSkills.io skill pages and the three GitHub repos, fetched 5 Nov 2026. Star counts and rankings change often — check the source page for the latest. This file is self-contained: save it anywhere and open it in a browser, offline search included.
+</footer>
+<script>
+  var search=document.getElementById('search'),
+      count=document.getElementById('count'), empty=document.getElementById('empty'),
+      cards=[].slice.call(document.querySelectorAll('.card'));
+  function apply(){
+    var q=search.value.trim().toLowerCase(), shown=0;
+    cards.forEach(function(c){
+      var okQ=!q||c.getAttribute('data-name').indexOf(q)>-1||c.textContent.toLowerCase().indexOf(q)>-1;
+      var show=okQ; c.classList.toggle('hidden',!show); if(show)shown++;
+    });
+    document.querySelectorAll('h2.cat').forEach(function(h){
+      var grid=h.nextElementSibling, any=false;
+      grid.querySelectorAll('.card').forEach(function(c){if(!c.classList.contains('hidden'))any=true;});
+      h.classList.toggle('hidden',!any); grid.classList.toggle('hidden',!any);
+    });
+    count.textContent=shown+' of '+cards.length+' skills';
+    empty.classList.toggle('hidden',shown>0);
+  }
+  search.addEventListener('input',apply); apply();
+</script>
+</body>
+</html>
